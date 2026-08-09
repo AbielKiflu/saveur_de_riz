@@ -1,0 +1,368 @@
+/* =========================================================
+   Contact Page
+   ========================================================= */
+
+
+/* =========================================================
+   Contact Header
+   ========================================================= */
+
+.contact-header {
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+   Eyebrow / Location Badge
+   --------------------------------------------------------- */
+
+.contact-eyebrow {
+    background-color: var(--bg-card);
+    color: var(--accent-gold);
+
+    border: 1px solid var(--accent-pink);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   Page Title
+   --------------------------------------------------------- */
+
+.contact-title {
+    color: var(--accent-gold);
+
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ---------------------------------------------------------
+   Traditional Vietnamese Motif
+   --------------------------------------------------------- */
+
+.contact-motif {
+    width: 180px;
+    height: 16px;
+
+    opacity: 0.9;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='16' viewBox='0 0 40 16'><path d='M0 8 L8 0 L16 8 L8 16 Z M20 8 L28 0 L36 8 L28 16 Z' fill='none' stroke='%23d81b60' stroke-width='1.5'/></svg>");
+
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+
+/* ---------------------------------------------------------
+   Introduction
+   --------------------------------------------------------- */
+
+.contact-intro {
+    max-width: 800px;
+
+    color: var(--text-main);
+
+    line-height: 1.8;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   Map
+   ========================================================= */
+
+.map-card {
+    background-color: var(--bg-card);
+
+    min-height: 400px;
+
+    border-bottom: 5px solid var(--accent-gold) !important;
+}
+
+.map-iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   Contact Card
+   ========================================================= */
+
+.contact-card {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+
+    border-bottom: 5px solid var(--accent-pink) !important;
+}
+
+
+/* =========================================================
+   Contact Headings
+   ========================================================= */
+
+.contact-heading,
+.hours-heading {
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+}
+
+.contact-heading {
+    font-size: 1.6rem;
+}
+
+.hours-heading {
+    font-size: 1.35rem;
+
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* =========================================================
+   Contact Information
+   ========================================================= */
+
+.contact-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.contact-item:last-child {
+    border-bottom: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Contact Icons
+   --------------------------------------------------------- */
+
+.contact-icon {
+    flex: 0 0 auto;
+
+    width: 2rem;
+
+    margin-top: 0.15rem;
+
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   Contact Labels
+   --------------------------------------------------------- */
+
+.contact-label {
+    color: var(--accent-gold);
+
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   Contact Links
+   ========================================================= */
+
+.contact-link {
+    color: var(--accent-pink);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--accent-gold);
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contact-link:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
+
+    border-radius: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   External Link Icon
+   --------------------------------------------------------- */
+
+.external-icon {
+    display: inline-block;
+
+    margin-left: 0.2rem;
+
+    font-size: 0.8em;
+    opacity: 0.75;
+
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover .external-icon {
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   Opening Hours
+   ========================================================= */
+
+.hours-list {
+    font-size: 0.95rem;
+}
+
+.hours-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hours-row:last-child {
+    border-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Opening Days
+   --------------------------------------------------------- */
+
+.hours-day {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.hours-day-closed {
+    opacity: 0.8;
+}
+
+
+/* ---------------------------------------------------------
+   Opening Time
+   --------------------------------------------------------- */
+
+.hours-time {
+    color: var(--accent-pink);
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   Closed Badge
+   --------------------------------------------------------- */
+
+.closed-badge {
+    display: inline-block;
+
+    padding: 0.3rem 0.8rem;
+
+    border: 1px solid var(--accent-gold);
+    border-radius: 999px;
+
+    background-color: transparent;
+    color: var(--text-main);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    /*
+     * Bootstrap stacks the map and contact card
+     * below the lg breakpoint.
+     */
+
+    .map-card {
+        min-height: 400px;
+    }
+
+    .map-iframe {
+        min-height: 400px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    /* -----------------------------------------------------
+       Header
+       ----------------------------------------------------- */
+
+    .contact-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .contact-motif {
+        width: 160px;
+    }
+
+    .contact-intro {
+        font-size: 1.05rem;
+    }
+
+
+    /* -----------------------------------------------------
+       Map
+       ----------------------------------------------------- */
+
+    .map-card {
+        min-height: 350px;
+    }
+
+    .map-iframe {
+        min-height: 350px;
+    }
+
+
+    /* -----------------------------------------------------
+       Contact Card
+       ----------------------------------------------------- */
+
+    .contact-card {
+        padding: 1.5rem !important;
+    }
+
+
+    /* -----------------------------------------------------
+       Opening Hours
+       ----------------------------------------------------- */
+
+    .hours-row {
+        gap: 1rem;
+    }
+
+    .hours-time {
+        text-align: right;
+    }
+}

@@ -1,0 +1,286 @@
+/* =========================================================
+   SAVEUR DE RIZ — ABOUT PAGE
+   ========================================================= */
+
+.about-page {
+    --about-radius: 1.5rem;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.about-hero {
+    background:
+        linear-gradient(
+            145deg,
+            var(--bg-card),
+            var(--bs-body-bg)
+        );
+
+    border: 1px solid var(--accent-pink) !important;
+    color: var(--text-main);
+}
+
+.about-hero-pattern {
+    position: absolute;
+    inset: 0;
+
+    opacity: .08;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            var(--accent-gold) 1.5px,
+            transparent 1.5px
+        );
+
+    background-size: 24px 24px;
+}
+
+.about-quote-mark {
+    color: var(--accent-pink);
+
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    line-height: .6;
+
+    margin-bottom: 1rem;
+}
+
+.about-quote {
+    max-width: 800px;
+
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.about-tagline {
+    display: inline-block;
+
+    max-width: 850px;
+    padding: .75rem 1.5rem;
+
+    border-radius: 999px;
+
+    background: var(--accent-pink);
+    color: #fff;
+
+    font-size: .95rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    box-shadow:
+        0 .5rem 1rem rgba(0, 0, 0, .12);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.about-eyebrow {
+    display: block;
+
+    margin-bottom: .35rem;
+
+    color: var(--slate-gray);
+
+    font-size: .8rem;
+    font-weight: 600;
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.about-title {
+    margin-bottom: .5rem;
+
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.about-subtitle {
+    color: var(--slate-gray);
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   REASON CARDS
+   ========================================================= */
+
+.reason-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2.25rem 1.75rem;
+
+    overflow: hidden;
+
+    background: var(--bg-card);
+    color: var(--text-main);
+
+    border: 1px solid rgba(0, 0, 0, .04);
+    border-radius: var(--about-radius);
+
+    box-shadow:
+        0 .75rem 2rem rgba(0, 0, 0, .08);
+
+    text-align: center;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* Top accent */
+
+.reason-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: var(--accent-pink);
+}
+
+.reason-card-gold::before {
+    background: var(--accent-gold);
+}
+
+
+/* Hover */
+
+.reason-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 1rem 2.5rem rgba(0, 0, 0, .13);
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.reason-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 1.5rem;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-pink),
+            #8a0f5d
+        );
+
+    color: #fff;
+
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    box-shadow:
+        0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.reason-card-gold .reason-number {
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-gold),
+            #8a6e42
+        );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.reason-title {
+    margin-bottom: 1rem;
+
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.reason-text {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: var(--slate-gray);
+
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .about-hero {
+        border-radius: 1.25rem !important;
+    }
+
+    .about-tagline {
+        border-radius: 1rem;
+    }
+
+    .reason-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-section-heading {
+        margin-bottom: 2rem !important;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reason-card {
+        transition: none;
+    }
+
+    .reason-card:hover {
+        transform: none;
+    }
+}

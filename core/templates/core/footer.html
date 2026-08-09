@@ -1,17 +1,17 @@
-<footer style="background-color: var(--bg-card); border-top: 2px solid var(--accent-pink); font-size: 0.8rem; text-align: center; color: var(--text-main); position: relative; overflow: hidden;">
-        <!-- Slimmer SVG Vietnamese Motifs Background Strip -->
-        <div style="width: 100%; height: 20px; opacity: 0.15; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2220%22 viewBox=%220 0 40 20%22><path d=%22M0 10 L10 0 L20 10 L10 20 Z M20 10 L30 0 L40 10 L30 20 Z%22 fill=%22none%22 stroke=%22%23D2B48C%22 stroke-width=%221.2%22/></svg>'); background-repeat: repeat-x; background-position: center;"></div>
+<div class="footer-credit">
+    <p class="mb-1">
+        &copy; <span id="current-year"></span>
+        <strong>Saveur de Riz</strong> — Traiteur vietnamien &amp; thaïlandais.
+        Tous droits réservés.
+    </p>
 
-        <div style="padding: 10px 15px 12px 15px;">
-            <p class="mb-1">&copy; <span id="current-year"></span> Saveur de Riz — Traiteur vietnamien & thaïlandais. Tous droits réservés.</p>
-            <p class="mb-0" style="font-size: 0.75rem; color: var(--slate-gray);">
-                Développé par <strong>Abiel Kiflu</strong> — 
-                <a href="mailto:abiel.kiflu.weld@gmail.com" style="color: var(--accent-gold); text-decoration: none;">abiel.kiflu.weld@gmail.com</a>
-            </p>
-        </div>
-</footer>
+    <p class="mb-0 footer-developer">
+        Conçu &amp; développé par
+        <strong>Abiel Kiflu</strong>
+        <span class="footer-separator">·</span>
+        <a href="mailto:abiel.kiflu.weld@gmail.com">
+            abiel.kiflu.weld@gmail.com
+        </a>
+    </p>
+</div>
 
-<script>
-    // Automatically set the current year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
