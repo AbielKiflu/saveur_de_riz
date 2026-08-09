@@ -1,0 +1,181 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Menu — Saveur de Riz{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Header Section -->
+    <div class="text-center mb-5 position-relative">
+        <span class="d-inline-block px-3 py-1 mb-3 rounded-pill text-uppercase tracking-wider shadow-sm" style="background-color: var(--bg-card); color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; border: 1px solid var(--accent-pink);">
+            🥢 Saveurs Authentiques
+        </span>
+        <h1 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 3.2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="mb-3">
+            NOTRE MENU
+        </h1>
+        
+        <!-- Traditional Vietnamese Motif Accent Bar -->
+        <div class="mx-auto mb-4" role="presentation" style="width: 180px; height: 16px; opacity: 0.9; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2216%22 viewBox=%220 0 40 16%22><path d=%22M0 8 L8 0 L16 8 L8 16 Z M20 8 L28 0 L36 8 L28 16 Z%22 fill=%22none%22 stroke=%22%23d81b60%22 stroke-width=%221.5%22/></svg>'); background-repeat: repeat-x; background-position: center;"></div>
+
+        <p class="lead mx-auto" style="color: var(--text-main); max-width: 800px; line-height: 1.8; font-size: 1.2rem; font-weight: 400;">
+            Découvrez notre sélection de plats faits maison, préparés avec soin par Madame Trang pour éveiller vos papilles.
+        </p>
+    </div>
+
+    <!-- Main Dishes Section -->
+    <div class="mb-5">
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <h2 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 2.2rem;" class="mb-0">🍜 Plats Principaux</h2>
+            <div class="flex-grow-1" role="presentation" style="height: 1px; background-color: var(--accent-pink); opacity: 0.5;"></div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between position-relative overflow-hidden" style="background-color: var(--bg-card); color: var(--text-main); border-top: 4px solid var(--accent-gold) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.35rem;" class="mb-2">Riz sauté au poulet</h3>
+                        <p class="mb-0" style="font-size: 0.95rem; color: var(--text-main); opacity: 0.85;">Délicieux riz sauté parfumé aux saveurs traditionnelles.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span class="badge px-3 py-2 rounded-pill" style="background-color: var(--accent-pink); color: #fff; font-size: 1rem; font-weight: 700;">10,50 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between position-relative overflow-hidden" style="background-color: var(--bg-card); color: var(--text-main); border-top: 4px solid var(--accent-pink) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.35rem;" class="mb-2">Nouilles sautées poulet</h3>
+                        <p class="mb-0" style="font-size: 0.95rem; color: var(--text-main); opacity: 0.85;">Nouilles sautées au wok avec des morceaux de poulet tendres.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span class="badge px-3 py-2 rounded-pill" style="background-color: var(--accent-pink); color: #fff; font-size: 1rem; font-weight: 700;">10,50 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between position-relative overflow-hidden" style="background-color: var(--bg-card); color: var(--text-main); border-top: 4px solid var(--accent-gold) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.35rem;" class="mb-2">Nouilles sautées aux légumes</h3>
+                        <p class="mb-0" style="font-size: 0.95rem; color: var(--text-main); opacity: 0.85;">Option végétarienne riche en légumes frais et savoureux.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span class="badge px-3 py-2 rounded-pill" style="background-color: var(--accent-pink); color: #fff; font-size: 1rem; font-weight: 700;">7,00 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Starters & Snacks Section -->
+    <div class="mb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <h2 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 2.2rem;" class="mb-0">🥟 Entrées / Snacks</h2>
+            <div class="flex-grow-1" role="presentation" style="height: 1px; background-color: var(--accent-pink); opacity: 0.5;"></div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Starter 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between" style="background-color: var(--bg-card); color: var(--text-main); border-left: 4px solid var(--accent-pink) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-1">Nem de porc</h3>
+                        <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">Croustillants et dorés</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">3 pcs</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.15rem;">6,50 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starter 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between" style="background-color: var(--bg-card); color: var(--text-main); border-left: 4px solid var(--accent-gold) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-1">Triangles de bœuf curry</h3>
+                        <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">Parfumé au curry</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">3 pcs</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.15rem;">6,50 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starter 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between" style="background-color: var(--bg-card); color: var(--text-main); border-left: 4px solid var(--accent-pink) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-1">Loempia aux poulet</h3>
+                        <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">Rouleaux croustillants au poulet</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">3 pcs</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.15rem;">6,50 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starter 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between" style="background-color: var(--bg-card); color: var(--text-main); border-left: 4px solid var(--accent-gold) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-1">Loempia végétarien</h3>
+                        <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">Version végétarienne savoureuse</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">3 pcs</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.15rem;">6,00 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starter 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between" style="background-color: var(--bg-card); color: var(--text-main); border-left: 4px solid var(--accent-pink) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-1">Beignets de scampis</h3>
+                        <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">Croustillants à l'extérieur, tendres à l'intérieur</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">à la pièce</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.15rem;">2,80 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starter 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-4 d-flex flex-column justify-content-between" style="background-color: var(--bg-card); color: var(--text-main); border-left: 4px solid var(--accent-gold) !important;">
+                    <div>
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-1">Beignets de poulet</h3>
+                        <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">Bouchées de poulet panées</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-top border-opacity-10 d-flex justify-content-between align-items-center">
+                        <span style="font-size: 0.9rem; color: var(--text-main); opacity: 0.8;">7 pièces</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.15rem;">6,50 €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starter 7 (Assortiment) -->
+            <div class="col-lg-12">
+                <div class="card shadow-sm border-0 rounded-4 p-4 d-flex flex-column flex-md-row justify-content-between align-items-center" style="background: linear-gradient(145deg, var(--bg-card), var(--bs-body-bg)); border: 1px solid var(--accent-pink) !important; color: var(--text-main);">
+                    <div class="mb-3 mb-md-0 text-center text-md-start">
+                        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.35rem;" class="mb-1">✨ Assortiment découverte</h3>
+                        <p class="mb-0" style="font-size: 0.95rem; color: var(--text-main); opacity: 0.85;">Un mélange varié pour goûter un peu de tout.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge px-3 py-1" style="background-color: var(--bg-card); color: var(--text-main); border: 1px solid var(--accent-gold);">5 pièces</span>
+                        <span style="color: var(--accent-gold); font-weight: 700; font-size: 1.25rem;">13,00 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

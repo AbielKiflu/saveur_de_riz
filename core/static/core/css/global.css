@@ -1,0 +1,49 @@
+  /* Global.css */
+:root {
+    /* Your Custom Palette Variables */
+    --bg-dark: #33333D;       
+    --bg-card: #3e3e4a;
+    --accent-pink: #C71585;   
+    --accent-gold: #D2B48C;   
+    --text-main: #FFFFFF;     
+    --slate-gray: #6A6F7C;    
+
+    /* Overriding Bootstrap's Global Theme Variables */
+    --bs-body-bg: var(--bg-dark);
+    --bs-body-color: var(--text-main);
+    --bs-primary: var(--accent-pink);
+    --bs-primary-rgb: 199, 21, 133;
+    --bs-secondary: var(--accent-gold);
+    --bs-secondary-rgb: 210, 180, 140;
+
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+[data-theme="light"] {
+    --bg-dark: #FFFFFF;       
+    --bg-card: #f4f4f6;
+    --accent-pink: #C71585;   
+    --accent-gold: #b38f59;   
+    --text-main: #33333D;     
+    --slate-gray: #6A6F7C;    
+
+    /* Light Mode Bootstrap Overrides */
+    --bs-body-bg: var(--bg-dark);
+    --bs-body-color: var(--text-main);
+}
+
+.navbar-toggler {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Dark Mode Toggler Icon (White lines) */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Light Mode Toggler Icon (Dark lines matching your light theme text) */
+[data-theme="light"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51, 51, 61, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}

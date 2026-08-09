@@ -1,0 +1,53 @@
+{% load static %}
+<header class="site-header">
+    <nav class="navbar navbar-expand-lg py-2" style="background-color: var(--bg-card); border-bottom: 2px solid var(--accent-pink);">
+        <div class="container-fluid px-3 px-lg-4">
+            <!-- Brand Logo & Name (Flushed to Left, Smaller) -->
+            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none m-0" href="{% url 'home' %}">
+                <img src="{% static 'core/images/logo.png' %}" alt="Saveur de Riz Logo" width="32" height="32" class="rounded-circle">
+                <span style="color: var(--accent-gold); font-family: serif; font-weight: bold; font-size: 1.15rem;">Saveur de Riz</span>
+            </a>
+
+            <!-- Mobile Hamburger Button (Flushed to Right) -->
+            <button class="navbar-toggler border-0 shadow-none m-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="transform: scale(0.85);"></span>
+            </button>
+
+            <!-- Navbar Links & Theme Toggle -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-2 gap-lg-3 mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link py-1" href="{% url 'home' %}" style="color: var(--text-main);">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-1" href="{% url 'menu' %}" style="color: var(--text-main);">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-1" href="{% url 'gallery' %}" style="color: var(--text-main);">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-1" href="{% url 'about' %}" style="color: var(--text-main);">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-1" href="{% url 'contact' %}" style="color: var(--text-main);">Contact</a>
+                    </li>
+                    
+                    <!-- Theme Toggle Dropdown -->
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--text-main);">
+                            <span style="font-size: 1rem;">🌓</span> 
+                            <span class="d-lg-none">Changer le mode</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" style="background-color: var(--bg-card); border: 1px solid var(--accent-pink);">
+                            <li>
+                                <button id="theme-toggle" class="dropdown-item d-flex align-items-center gap-2 py-1" style="color: var(--text-main); background: transparent;">
+                                    <span>🌓</span> Basculer Thème
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

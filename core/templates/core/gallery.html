@@ -1,0 +1,105 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Galerie — Saveur de Riz{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Header Section -->
+    <div class="text-center mb-5 position-relative">
+        <span class="d-inline-block px-3 py-1 mb-3 rounded-pill text-uppercase tracking-wider shadow-sm" style="background-color: var(--bg-card); color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; border: 1px solid var(--accent-pink);">
+            📸 Nos Réalisations
+        </span>
+        <h1 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 3.2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="mb-3">
+            GALERIE PHOTOS
+        </h1>
+        
+        <!-- Traditional Vietnamese Motif Accent Bar -->
+        <div class="mx-auto mb-4" role="presentation" style="width: 180px; height: 16px; opacity: 0.9; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2216%22 viewBox=%220 0 40 16%22><path d=%22M0 8 L8 0 L16 8 L8 16 Z M20 8 L28 0 L36 8 L28 16 Z%22 fill=%22none%22 stroke=%22%23d81b60%22 stroke-width=%221.5%22/></svg>'); background-repeat: repeat-x; background-position: center;"></div>
+
+        <p class="lead mx-auto" style="color: var(--text-main); max-width: 800px; line-height: 1.8; font-size: 1.2rem; font-weight: 400;">
+            Plongez dans l'univers coloré et gourmand de Madame Trang à travers nos plats faits maison et notre savoir-faire traiteur.
+        </p>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row g-4">
+        <!-- Photo Card 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative" style="background-color: var(--bg-card); border-bottom: 4px solid var(--accent-gold) !important;">
+                <div class="ratio ratio-4x3 bg-secondary bg-opacity-15 d-flex align-items-center justify-content-center">
+                    <span style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.1rem; font-style: italic;">Plat Traditionnel</span>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-2">Spécialités Wok</h3>
+                    <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.85;">Préparations sautées minute aux saveurs thaï et vietnamiennes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Card 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative" style="background-color: var(--bg-card); border-bottom: 4px solid var(--accent-pink) !important;">
+                <div class="ratio ratio-4x3 bg-secondary bg-opacity-15 d-flex align-items-center justify-content-center">
+                    <span style="color: var(--accent-pink); font-family: var(--font-heading); font-size: 1.1rem; font-style: italic;">Entrées Croustillantes</span>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-2">Nems & Loempias</h3>
+                    <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.85;">Dorés à souhait et servis avec leurs accompagnements.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Card 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative" style="background-color: var(--bg-card); border-bottom: 4px solid var(--accent-gold) !important;">
+                <div class="ratio ratio-4x3 bg-secondary bg-opacity-15 d-flex align-items-center justify-content-center">
+                    <span style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.1rem; font-style: italic;">Assortiments Traiteur</span>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-2">Buffets & Événements</h3>
+                    <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.85;">Une présentation colorée pour ravir vos invités lors de vos réceptions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Card 4 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative" style="background-color: var(--bg-card); border-bottom: 4px solid var(--accent-pink) !important;">
+                <div class="ratio ratio-4x3 bg-secondary bg-opacity-15 d-flex align-items-center justify-content-center">
+                    <span style="color: var(--accent-pink); font-family: var(--font-heading); font-size: 1.1rem; font-style: italic;">Riz Parfumé</span>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-2">Plats Signature</h3>
+                    <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.85;">Le savoir-faire de Saveur de Riz mis à l'honneur au quotidien.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Card 5 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative" style="background-color: var(--bg-card); border-bottom: 4px solid var(--accent-gold) !important;">
+                <div class="ratio ratio-4x3 bg-secondary bg-opacity-15 d-flex align-items-center justify-content-center">
+                    <span style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.1rem; font-style: italic;">Finesse & Goût</span>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-2">Saveurs d'Asie</h3>
+                    <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.85;">Une cuisine raffinée, authentique et chaleureuse.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Card 6 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative" style="background-color: var(--bg-card); border-bottom: 4px solid var(--accent-pink) !important;">
+                <div class="ratio ratio-4x3 bg-secondary bg-opacity-15 d-flex align-items-center justify-content-center">
+                    <span style="color: var(--accent-pink); font-family: var(--font-heading); font-size: 1.1rem; font-style: italic;">Comptoir Traiteur</span>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.25rem;" class="mb-2">Prêt à emporter</h3>
+                    <p class="mb-0" style="font-size: 0.9rem; color: var(--text-main); opacity: 0.85;">Retrouvez nos sélections chaudes directement en vitrine.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

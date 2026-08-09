@@ -1,20 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Saveur de Riz - Authentic Vietnamese Catering</title>
-</head>
-<body style="background-color: #222222; color: #fdfbf7; font-family: serif; text-align: center; padding: 50px;">
-    <h1 style="color: #e6b800; font-size: 3rem;">Saveur de Riz</h1>
-    <p style="font-size: 1.4rem; color: #cccccc;">Welcome to the Flavor of Rice — Authentic Vietnamese Catering & Culture.</p>
-    <hr style="width: 50%; margin: 30px auto; border-color: #444;">
-    <p style="font-size: 1.1rem;">
-        <a href="{% url 'menu' %}" style="color: #ffcc66; margin: 0 10px;">View Menu</a> | 
-        <a href="{% url 'gallery' %}" style="color: #ffcc66; margin: 0 10px;">Gallery</a> | 
-        <a href="{% url 'about' %}" style="color: #ffcc66; margin: 0 10px;">About Us</a> | 
-        <a href="{% url 'contact' %}" style="color: #ffcc66; margin: 0 10px;">Contact</a>
-    </p>
-    <br>
-    <p><a href="/admin/" style="color: #ffffff; background-color: #8B4513; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Go to Admin Panel</a></p>
-</body>
-</html>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Accueil — Saveur de Riz{% endblock %}
+
+{% block content %}
+<!-- Hero Carousel Section -->
+<div id="heroCarousel" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden mb-5" data-bs-ride="carousel" data-bs-interval="5000">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Carousel Items -->
+    <div class="carousel-inner" style="min-height: 500px; background-color: #2a2a2a;">
+        
+        <!-- Slide 1 -->
+        <div class="carousel-item active h-100 position-relative">
+            <!-- Ensure your image exists at: static/images/carousel/slide_1.jpg -->
+            <img src="{% static 'core/images/carousel/slide_1.jpg' %}" class="d-block w-100 h-100 object-fit-cover" alt="Plat traditionnel vietnamien">
+            
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center h-100 py-5 px-4 position-absolute top-0 start-0 w-100 z-1" style="background: rgba(0,0,0,0.4);">
+                <span class="d-inline-block px-3 py-1 mb-3 rounded-pill text-uppercase tracking-wider shadow-sm" style="background-color: var(--bg-card); color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; border: 1px solid var(--accent-pink);">
+                    ✨ Excellence Culinaire à Verviers
+                </span>
+                <h1 style="color: #ffffff; font-family: var(--font-heading); font-size: 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);" class="mb-3">
+                    SAVEUR DE RIZ
+                </h1>
+                <p class="lead mx-auto mb-4" style="color: #ffffff; max-width: 750px; font-size: 1.2rem; line-height: 1.7; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">
+                    Spécialiste des plats à emporter, Madame Trang vous invite à découvrir sa cuisine traditionnelle vietnamienne et thaïlandaise raffinée.
+                </p>
+                <a href="{% url 'menu' %}" class="btn px-4 py-3 rounded-pill shadow" style="background-color: var(--accent-pink); color: #ffffff; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.5px;">
+                    Découvrir Notre Menu 🍜
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item h-100 position-relative">
+            <img src="{% static 'core/images/carousel/slide_2.jpg' %}" class="d-block w-100 h-100 object-fit-cover" alt="Wok et spécialités">
+
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center h-100 py-5 px-4 position-absolute top-0 start-0 w-100 z-1" style="background: rgba(0,0,0,0.4);">
+                <span class="d-inline-block px-3 py-1 mb-3 rounded-pill text-uppercase tracking-wider shadow-sm" style="background-color: var(--bg-card); color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; border: 1px solid var(--accent-pink);">
+                    🥢 Fait Maison & Authenticité
+                </span>
+                <h2 style="color: #ffffff; font-family: var(--font-heading); font-size: 2.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);" class="mb-3">
+                    UNE EXPLOSION DE SAVEURS
+                </h2>
+                <p class="lead mx-auto mb-4" style="color: #ffffff; max-width: 750px; font-size: 1.2rem; line-height: 1.7; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">
+                    Des nems croustillants aux woks parfumés, régalez-vous avec des produits frais, riches en goût et peu caloriques.
+                </p>
+                <a href="{% url 'menu' %}" class="btn px-4 py-3 rounded-pill shadow" style="background-color: var(--accent-gold); color: #1a1a1a; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.5px;">
+                    Voir Nos Plats ✨
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item h-100 position-relative">
+            <img src="{% static 'core/images/carousel/slide_3.jpg' %}" class="d-block w-100 h-100 object-fit-cover" alt="Service traiteur">
+
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center h-100 py-5 px-4 position-absolute top-0 start-0 w-100 z-1" style="background: rgba(0,0,0,0.4);">
+                <span class="d-inline-block px-3 py-1 mb-3 rounded-pill text-uppercase tracking-wider shadow-sm" style="background-color: var(--bg-card); color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; border: 1px solid var(--accent-pink);">
+                    🎉 Commandes & Traiteur
+                </span>
+                <h2 style="color: #ffffff; font-family: var(--font-heading); font-size: 2.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);" class="mb-3">
+                    POUR VOS ÉVÉNEMENTS
+                </h2>
+                <p class="lead mx-auto mb-4" style="color: #ffffff; max-width: 750px; font-size: 1.2rem; line-height: 1.7; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">
+                    Offrez à vos invités un service traiteur de qualité haute en couleurs. Commandez par téléphone au <strong style="color: #ffcccc;">087 22 55 90</strong> !
+                </p>
+                <a href="{% url 'contact' %}" class="btn px-4 py-3 rounded-pill shadow" style="background-color: var(--accent-pink); color: #ffffff; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.5px;">
+                    Nous Contacter 📍
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+    </button>
+</div>
+
+<!-- Quick Features Section -->
+<div class="row g-4 text-center mt-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4" style="background-color: var(--bg-card); color: var(--text-main); border-bottom: 4px solid var(--accent-gold) !important;">
+            <div class="fs-1 mb-3" aria-hidden="true">🥡</div>
+            <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.3rem;" class="mb-2">À Emporter</h3>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4" style="background-color: var(--bg-card); color: var(--text-main); border-bottom: 4px solid var(--accent-pink) !important;">
+            <div class="fs-1 mb-3" aria-hidden="true">🌿</div>
+            <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.3rem;" class="mb-2">Frais & Léger</h3>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4" style="background-color: var(--bg-card); color: var(--text-main); border-bottom: 4px solid var(--accent-gold) !important;">
+            <div class="fs-1 mb-3" aria-hidden="true">🎊</div>
+            <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.3rem;" class="mb-2">Service Traiteur</h3>
+        </div>
+    </div>
+</div>
+{% endblock %}

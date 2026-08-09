@@ -1,0 +1,89 @@
+{% extends 'core/base.html' %}
+
+{% block title %}À propos — Saveur de Riz{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero Header Section -->
+    <div class="text-center mb-5 position-relative">
+        <span class="d-inline-block px-3 py-1 mb-3 rounded-pill text-uppercase tracking-wider shadow-sm" style="background-color: var(--bg-card); color: var(--accent-gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; border: 1px solid var(--accent-pink);">
+            ✨ Excellence Culinaire à Verviers
+        </span>
+        <h2 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 3.2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);" class="mb-3">
+            TRAITEUR ASIATIQUE
+        </h2>
+        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center gap-2" style="width: 120px;">
+            <div style="height: 1px; width: 40px; background-color: var(--accent-pink);"></div>
+            <span style="color: var(--accent-pink); font-size: 1.2rem;">❀</span>
+            <div style="height: 1px; width: 40px; background-color: var(--accent-pink);"></div>
+        </div>
+        <p class="lead mx-auto" style="color: var(--text-main); max-width: 850px; line-height: 1.8; font-size: 1.2rem;">
+            Spécialiste des plats à emporter, <strong style="color: var(--accent-gold);">Madame Trang</strong> vous propose de découvrir son panel de la cuisine traditionnelle vietnamienne & thaïlandaise raffinée, peu calorique et exotique.
+        </p>
+    </div>
+
+    <!-- Main Highlight Quote Card with Artistic Flair -->
+    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 mb-5 text-center position-relative overflow-hidden" style="background: linear-gradient(145deg, var(--bg-card), var(--bs-body-bg)); border: 1px solid var(--accent-pink) !important; color: var(--text-main);">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-5" style="background-image: radial-gradient(var(--accent-gold) 1.5px, transparent 1.5px); background-size: 24px 24px; pointer-events: none;"></div>
+        <div class="position-relative z-1 py-3">
+            <p style="font-size: 1.4rem; color: var(--accent-gold); font-family: var(--font-heading); font-style: italic; max-width: 800px;" class="mx-auto mb-4">
+               <span style="font-size: 3rem; color: var(--accent-pink); line-height: 0.5;" class="d-inline mb-3">“</span>
+                Une invitation à mieux explorer la finesse de ces mets gourmands et riches en goût.
+            <span style="font-size: 3rem; color: var(--accent-pink); line-height: 0.5;" class="d-inline mb-3">“</span>
+            </p>
+            <div class="badge px-4 py-2 rounded-pill shadow-sm" style="background-color: var(--accent-pink); color: #fff; font-size: 0.95rem; font-weight: 500;">
+                Offrez-vous un traiteur asiatique de qualité haute en couleurs pour vos événements privés ou professionnels !
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 Good Reasons Section Heading -->
+    <div class="text-center mb-5">
+        <span class="text-uppercase" style="color: var(--slate-gray); font-size: 0.85rem; letter-spacing: 1.5px;">Pourquoi nous choisir</span>
+        <h3 style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 2.5rem;" class="mt-1 mb-2">3 bonnes raisons de passer chez nous</h3>
+        <p style="color: var(--slate-gray); font-size: 1rem;">L'expérience authentique Saveur de Riz</p>
+    </div>
+
+    <!-- 3 Good Reasons Grid with Enhanced UI -->
+    <div class="row g-4 justify-content-center align-items-stretch">
+        <!-- Reason 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-lg border-0 rounded-4 p-4 text-center d-flex flex-column align-items-center position-relative overflow-hidden" style="background-color: var(--bg-card); color: var(--text-main); border-bottom: 5px solid var(--accent-pink) !important;">
+                <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 shadow" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent-pink), #8a0f5d); color: #fff; font-family: var(--font-heading); font-weight: bold; font-size: 1.8rem;">
+                    1
+                </div>
+                <h4 style="color: var(--accent-gold); font-family: var(--font-heading);" class="mb-3">Commande & Emporté</h4>
+                <p class="mb-0 text-muted" style="font-size: 1rem; line-height: 1.7; color: var(--slate-gray) !important;">
+                    Vous passez commande par téléphone ou directement sur place, enlèvement le jour même à une heure précise de la journée.
+                </p>
+            </div>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-lg border-0 rounded-4 p-4 text-center d-flex flex-column align-items-center position-relative overflow-hidden" style="background-color: var(--bg-card); color: var(--text-main); border-bottom: 5px solid var(--accent-gold) !important;">
+                <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 shadow" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent-gold), #8a6e42); color: #fff; font-family: var(--font-heading); font-weight: bold; font-size: 1.8rem;">
+                    2
+                </div>
+                <h4 style="color: var(--accent-gold); font-family: var(--font-heading);" class="mb-3">Comptoir Traiteur</h4>
+                <p class="mb-0 text-muted" style="font-size: 1rem; line-height: 1.7; color: var(--slate-gray) !important;">
+                    Vous êtes pressé, pas le temps de commander? Nous mettons à votre disposition un comptoir « traiteur ».
+                </p>
+            </div>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-lg border-0 rounded-4 p-4 text-center d-flex flex-column align-items-center position-relative overflow-hidden" style="background-color: var(--bg-card); color: var(--text-main); border-bottom: 5px solid var(--accent-pink) !important;">
+                <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 shadow" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent-pink), #8a0f5d); color: #fff; font-family: var(--font-heading); font-weight: bold; font-size: 1.8rem;">
+                    3
+                </div>
+                <h4 style="color: var(--accent-gold); font-family: var(--font-heading);" class="mb-3">Service Chaud</h4>
+                <p class="mb-0 text-muted" style="font-size: 1rem; line-height: 1.7; color: var(--slate-gray) !important;">
+                    Notre traiteur propose un service repas chaud, lors de votre commande n’oubliez pas de le préciser !
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
