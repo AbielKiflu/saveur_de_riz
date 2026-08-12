@@ -1,0 +1,146 @@
+/* =====================================================
+   SAVEUR DE RIZ — NAVBAR
+   ===================================================== */
+
+.site-navbar {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  z-index: 1030;
+}
+
+.site-navbar-brand {
+  color: var(--text-main) !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-navbar-brand:hover,
+.site-navbar-brand:focus {
+  color: var(--accent-pink) !important;
+}
+
+/* =====================================================
+   NAV LINKS
+   ===================================================== */
+
+.site-navbar .nav-link {
+  color: var(--text-main);
+  font-weight: 500;
+  padding: 0.35rem 0.5rem;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus {
+  color: var(--accent-pink);
+}
+
+.site-navbar .nav-link[aria-current="page"] {
+  color: var(--accent-pink);
+  font-weight: 600;
+}
+
+/* =====================================================
+   HAMBURGER
+   ===================================================== */
+
+.site-navbar .navbar-toggler {
+  color: var(--text-main);
+}
+
+.site-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.site-navbar .navbar-toggler-icon {
+  transform: scale(0.85);
+}
+
+/* =====================================================
+   THEME BUTTON
+   ===================================================== */
+
+.theme-menu-button {
+  border: 0;
+  background: transparent;
+  color: var(--text-main) !important;
+}
+
+.theme-menu-button:hover,
+.theme-menu-button:focus {
+  color: var(--accent-pink) !important;
+}
+
+.theme-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* =====================================================
+   DROPDOWN
+   ===================================================== */
+
+.theme-dropdown {
+  min-width: 190px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-pink);
+}
+
+.theme-dropdown-item {
+  color: var(--text-main);
+  background: transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-dropdown-item:hover,
+.theme-dropdown-item:focus {
+  color: var(--text-main);
+  background-color: var(--bg-main);
+}
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 991.98px) {
+
+  .site-navbar .navbar-collapse {
+    padding: 1rem 0;
+  }
+
+  .site-navbar .navbar-nav {
+    align-items: stretch !important;
+  }
+
+  .site-navbar .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0.75rem !important;
+  }
+
+  .theme-dropdown {
+    border: 0;
+    box-shadow: none !important;
+  }
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 575.98px) {
+
+  .site-navbar-brand {
+    font-size: 1.4rem;
+  }
+
+}

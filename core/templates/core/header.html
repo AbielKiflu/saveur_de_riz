@@ -1,53 +1,156 @@
 {% load static %}
-<header class="site-header">
-    <nav class="navbar navbar-expand-lg py-2" style="background-color: var(--bg-card); border-bottom: 2px solid var(--accent-pink);">
-        <div class="container-fluid px-3 px-lg-4">
-            <!-- Brand Logo & Name (Flushed to Left, Smaller) -->
-            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none m-0" href="{% url 'home' %}">
-                <img src="{% static 'core/images/logo.png' %}" alt="Saveur de Riz Logo" width="32" height="32" class="rounded-circle">
-                <span style="color: var(--accent-gold); font-family: serif; font-weight: bold; font-size: 1.15rem;">Saveur de Riz</span>
-            </a>
 
-            <!-- Mobile Hamburger Button (Flushed to Right) -->
-            <button class="navbar-toggler border-0 shadow-none m-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="transform: scale(0.85);"></span>
-            </button>
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
 
-            <!-- Navbar Links & Theme Toggle -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-lg-center gap-2 gap-lg-3 mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link py-1" href="{% url 'home' %}" style="color: var(--text-main);">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-1" href="{% url 'menu' %}" style="color: var(--text-main);">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-1" href="{% url 'gallery' %}" style="color: var(--text-main);">Galerie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-1" href="{% url 'about' %}" style="color: var(--text-main);">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-1" href="{% url 'contact' %}" style="color: var(--text-main);">Contact</a>
-                    </li>
-                    
-                    <!-- Theme Toggle Dropdown -->
-                    <li class="nav-item dropdown ms-lg-2">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--text-main);">
-                            <span style="font-size: 1rem;">🌓</span> 
-                            <span class="d-lg-none">Changer le mode</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow" style="background-color: var(--bg-card); border: 1px solid var(--accent-pink);">
-                            <li>
-                                <button id="theme-toggle" class="dropdown-item d-flex align-items-center gap-2 py-1" style="color: var(--text-main); background: transparent;">
-                                    <span>🌓</span> Basculer Thème
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+<nav
+  class="navbar navbar-expand-lg site-navbar"
+  aria-label="Navigation principale"
+>
+  <div class="container">
+
+    <!-- Logo / Nom du site -->
+    <a
+      class="navbar-brand site-navbar-brand"
+      href="{% url 'home' %}"
+      aria-label="Saveur de Riz - Accueil"
+    >
+        <img src="{% static 'core/images/logo.png' %}" alt="Saveur de Riz Logo" width="32" height="32" class="rounded-circle">
+        <span style="color: var(--accent-gold); font-family: serif; font-weight: bold; font-size: 1.15rem;">Saveur de Riz</span>
+    </a>
+
+    <!-- Mobile Hamburger -->
+    <button
+      class="navbar-toggler border-0 shadow-none m-0 p-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Ouvrir le menu de navigation"
+    >
+      <span
+        class="navbar-toggler-icon"
+        aria-hidden="true"
+      ></span>
+    </button>
+
+    <!-- Navigation -->
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+    >
+      <ul
+        class="navbar-nav align-items-lg-center gap-2 gap-lg-3 mt-2 mt-lg-0"
+      >
+
+        <!-- Accueil -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'home' %}"
+            {% if request.resolver_match.url_name == 'home' %}
+              aria-current="page"
+            {% endif %}
+          >
+            Accueil
+          </a>
+        </li>
+
+        <!-- Menu -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'menu' %}"
+            {% if request.resolver_match.url_name == 'menu' %}
+              aria-current="page"
+            {% endif %}
+          >
+            Menu
+          </a>
+        </li>
+
+        <!-- Galerie -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'gallery' %}"
+            {% if request.resolver_match.url_name == 'gallery' %}
+              aria-current="page"
+            {% endif %}
+          >
+            Galerie
+          </a>
+        </li>
+
+        <!-- À propos -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'about' %}"
+            {% if request.resolver_match.url_name == 'about' %}
+              aria-current="page"
+            {% endif %}
+          >
+            À propos
+          </a>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'contact' %}"
+            {% if request.resolver_match.url_name == 'contact' %}
+              aria-current="page"
+            {% endif %}
+          >
+            Contact
+          </a>
+        </li>
+
+        <!-- Theme -->
+        <li class="nav-item dropdown ms-lg-2">
+
+          <button
+            class="nav-link dropdown-toggle theme-menu-button d-flex align-items-center gap-2"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-label="Choisir le mode d'affichage"
+          >
+            <span
+              class="theme-icon"
+              aria-hidden="true"
+            >
+              🌓
+            </span>
+
+            <span class="d-lg-none">
+              Changer le mode
+            </span>
+          </button>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow theme-dropdown"
+          >
+            <li>
+              <button
+                id="theme-toggle"
+                class="dropdown-item theme-dropdown-item d-flex align-items-center gap-2 py-2"
+                type="button"
+              >
+                <span aria-hidden="true">🌓</span>
+                <span>Basculer le thème</span>
+              </button>
+            </li>
+          </ul>
+
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
